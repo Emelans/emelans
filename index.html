@@ -96,8 +96,8 @@
     }
     a.button {
       padding: 12px 24px;
-      background-color: var(--accent);
-      color: white;
+      background-color: white;
+      color: black;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
@@ -142,14 +142,16 @@
     <ul>
       <li data-tr="CV Hazırlama" data-en="CV Preparation">CV Hazırlama</li>
       <li data-tr="Niyet Mektubu Yazımı" data-en="Cover Letter Writing">Niyet Mektubu Yazımı</li>
-      <li data-tr="LinkedIn Profil Düzenleme" data-en="LinkedIn Profile Editing">LinkedIn Profil Düzenleme</li>
+      <li data-tr="Linkedin Profil Optimizasyonu" data-en="Linkedin Profile Optimization">Linkedin Profil Optimizasyonu</li>
     </ul>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdr7SpM2NMKgaeiIhPSuS0KF4XdOMTKDhzDIo88TDiCFeWfLw/viewform?usp=header"
+       target="_blank" class="button">Başvuru Yap</a>
   </section>
 
   <section id="pricing" class="fade-in">
     <h2 data-tr="Fiyatlar" data-en="Pricing">Fiyatlar</h2>
-    <p data-tr="CV + Niyet Mektubu: $49 (ilk 5 kişiye $29)" data-en="CV + Cover Letter: $49 (first 5 clients $29)">
-      CV + Niyet Mektubu: $49 (ilk 5 kişiye $29)
+    <p data-tr="CV + Niyet Mektubu: $10" data-en="CV + Cover Letter: $10">
+      CV + Niyet Mektubu: $10
     </p>
   </section>
 
@@ -158,8 +160,6 @@
     <p data-tr="info@emelans.com adresinden bize ulaşabilirsiniz." data-en="You can reach us at info@emelans.com">
       info@emelans.com adresinden bize ulaşabilirsiniz.
     </p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdr7SpM2NMKgaeiIhPSuS0KF4XdOMTKDhzDIo88TDiCFeWfLw/viewform?usp=header"
-       target="_blank" class="button">Formu Doldur</a>
   </section>
 
   <footer>
@@ -180,7 +180,8 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove('visible');
         }
       });
     }, appearOptions);
