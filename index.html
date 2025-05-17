@@ -33,24 +33,33 @@
       padding: 15px 40px;
       z-index: 1000;
     }
+    .logo a {
+      color: var(--text);
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
     nav .links {
       display: flex;
       gap: 20px;
+      justify-content: center;
+      flex: 1;
     }
     nav .links a {
       text-decoration: none;
       color: var(--text);
       font-weight: 500;
     }
-    .flags {
+    .language-switch {
       display: flex;
       gap: 10px;
+      margin-right: auto;
+      margin-left: 40px;
     }
-    .flags img {
-      width: 20px;
-      height: 20px;
+    .language-switch span {
+      color: var(--text);
       cursor: pointer;
-      border-radius: 3px;
+      font-weight: 500;
     }
     section {
       padding: 100px 40px;
@@ -103,15 +112,18 @@
 </head>
 <body>
   <nav>
+    <div class="logo">
+      <a href="#">Emelans</a>
+    </div>
     <div class="links">
       <a href="#about">Hakkımızda</a>
       <a href="#services">Hizmetler</a>
       <a href="#pricing">Fiyatlar</a>
       <a href="#contact">İletişim</a>
     </div>
-    <div class="flags">
-      <img src="https://flagcdn.com/w20/tr.png" alt="TR" onclick="setLanguage('tr')" />
-      <img src="https://flagcdn.com/w20/us.png" alt="EN" onclick="setLanguage('en')" />
+    <div class="language-switch">
+      <span onclick="setLanguage('tr')">TR</span>
+      <span onclick="setLanguage('en')">EN</span>
     </div>
   </nav>
 
@@ -180,4 +192,3 @@
   </script>
 </body>
 </html>
-
