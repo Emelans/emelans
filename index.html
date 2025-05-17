@@ -28,7 +28,7 @@
       background: var(--card);
       border-bottom: 1px solid var(--border);
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding: 15px 40px;
       z-index: 1000;
@@ -43,15 +43,14 @@
       font-weight: 500;
     }
     .flags {
-      position: absolute;
-      right: 40px;
       display: flex;
       gap: 10px;
     }
     .flags img {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       cursor: pointer;
+      border-radius: 3px;
     }
     section {
       padding: 100px 40px;
@@ -61,14 +60,12 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       min-height: 100vh;
-      background: linear-gradient(to right, #161b22, #0d1117);
     }
     .hero h1 {
       font-size: 48px;
@@ -113,8 +110,8 @@
       <a href="#contact">İletişim</a>
     </div>
     <div class="flags">
-      <img src="https://flagcdn.com/w20/tr.png" style="border-radius: 3px;" alt="TR" onclick="setLanguage('tr')" />
-      <img src="https://flagcdn.com/w20/us.png" style="border-radius: 3px;" alt="EN" onclick="setLanguage('en')" />
+      <img src="https://flagcdn.com/w20/tr.png" alt="TR" onclick="setLanguage('tr')" />
+      <img src="https://flagcdn.com/w20/us.png" alt="EN" onclick="setLanguage('en')" />
     </div>
   </nav>
 
@@ -163,8 +160,9 @@
 
   <script>
     function setLanguage(lang) {
-      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-        el.innerText = el.getAttribute('data-' + lang);
+      document.querySelectorAll('[data-tr], [data-en]').forEach(el => {
+        const value = el.getAttribute('data-' + lang);
+        if (value) el.textContent = value;
       });
     }
 
@@ -182,3 +180,4 @@
   </script>
 </body>
 </html>
+
