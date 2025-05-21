@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emelans</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --text: #ffffff;
+      --accent: #58a6ff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+    .centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-size: 64px;
+      margin: 0;
+      animation: flicker 3s infinite alternate;
+    }
+    p {
+      font-size: 24px;
+      opacity: 0.7;
+      animation: fadeInUp 2s ease-out forwards;
+      animation-delay: 2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes flicker {
+      0% { opacity: 1; text-shadow: 0 0 10px var(--accent); }
+      50% { opacity: 0.85; text-shadow: 0 0 20px var(--accent); }
+      100% { opacity: 1; text-shadow: 0 0 15px var(--accent); }
+    }
+  </style>
+</head>
+<body>
+  <div class="centered">
+    <h1>Emelans</h1>
+    <p>Coming Soon</p>
+  </div>
+</body>
+</html>
