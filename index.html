@@ -1,4 +1,5 @@
-
+# Animated gradient background version of the "Coming Soon" page
+html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0a0a;
       --text: #ffffff;
       --accent: #58a6ff;
     }
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: var(--bg);
+      background: linear-gradient(-45deg, #0a0a0a, #141e30, #243b55, #0a0a0a);
+      background-size: 400% 400%;
+      animation: gradient 20s ease infinite;
       color: var(--text);
       overflow-x: hidden;
     }
@@ -40,6 +42,11 @@
       animation: fadeInUp 2s ease-out forwards;
       animation-delay: 2s;
     }
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -62,3 +69,10 @@
   </div>
 </body>
 </html>
+"""
+
+file_path = "/mnt/data/index.html"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+file_path
