@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr" class="dark scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emelans Games — Oyun Stüdyosu</title>
   <meta name="description" content="Emelans Games: Bağımsız oyun stüdyosu. Hızlı, pürüzsüz ve keyifli oyunlar geliştiriyoruz." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -33,13 +34,13 @@
     .focus-ring:focus { outline: 2px solid #7c3aed; outline-offset: 2px; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+<body class="bg-black text-slate-100 antialiased">
   <!-- NAV -->
-  <header class="sticky top-0 z-30 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/70 animate-fadeIn">
+  <header class="sticky top-0 z-30 border-b border-purple-900/50 bg-black/70 backdrop-blur animate-fadeIn">
     <nav class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
       <a href="#" class="flex items-center gap-2 focus-ring">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-brand"><path d="M12 2l3.09 6.26L22 9.27l-5 4.91L18.18 22 12 18.77 5.82 22 7 14.18l-5-4.91 6.91-1.01z"/></svg>
-        <span class="font-semibold tracking-tight">Emelans Games</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-purple-400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.91L18.18 22 12 18.77 5.82 22 7 14.18l-5-4.91 6.91-1.01z"/></svg>
+        <span class="font-semibold tracking-tight text-purple-300">Emelans Games</span>
       </a>
       <div class="hidden gap-6 md:flex">
         <a href="#games" class="text-sm hover:opacity-80 focus-ring">Oyunlar</a>
@@ -47,74 +48,74 @@
         <a href="#careers" class="text-sm hover:opacity-80 focus-ring">Kariyer</a>
       </div>
       <div class="hidden items-center gap-2 sm:flex">
-        <a href="#discord" class="rounded-lg bg-brand px-3 py-2 text-sm font-medium text-white focus-ring">Discord'a Katıl</a>
+        <a href="https://discord.gg/" target="_blank" rel="noopener" class="rounded-lg bg-purple-600 px-3 py-2 text-sm font-medium text-white hover:bg-purple-500 focus-ring">Discord'a Katıl</a>
       </div>
     </nav>
   </header>
 
-  <main class="mx-auto max-w-6xl px-4 animate-fadeIn">
+  <main class="mx-auto max-w-6xl px-4 animate-fadeIn selection:bg-purple-700/30 selection:text-purple-200">
     <!-- HERO -->
     <section class="grid grid-cols-1 items-center gap-10 py-16 md:grid-cols-2">
       <div class="animate-slideUp">
-        <span class="inline-block rounded-full border border-slate-200 px-2 py-1 text-xs text-slate-600 dark:border-slate-800 dark:text-slate-300">Bağımsız Oyun Stüdyosu</span>
+        <span class="inline-block rounded-full border border-purple-900/40 px-2 py-1 text-xs text-slate-300">Bağımsız Oyun Stüdyosu</span>
         <h1 class="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Hızlı, akıcı, tekrar oynanabilir oyunlar</h1>
-        <p class="mt-4 text-slate-600 dark:text-slate-300">Teknik şov değil, <span class="font-semibold">oynanış</span>. Emelans Games; mobil ve PC için küçük ama cilalı deneyimler üretir.</p>
+        <p class="mt-4 text-slate-300">Teknik şov değil, <span class="font-semibold">oynanış</span>. Emelans Games; mobil ve PC için küçük ama cilalı deneyimler üretir.</p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#trailer" class="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white focus-ring">Fragmanı İzle</a>
-          <a href="#games" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold focus-ring dark:border-slate-700">Oyunlara Git</a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white hover:bg-purple-500 focus-ring">Fragmanı İzle</a>
+          <a href="#games" class="rounded-lg border border-purple-800 px-4 py-2 text-sm font-semibold hover:bg-purple-900/30 focus-ring">Oyunlara Git</a>
         </div>
       </div>
       <div class="relative animate-slideUp">
-        <div class="rounded-2xl border border-slate-200 p-4 shadow-sm dark:border-slate-800">
-          <div class="aspect-video w-full rounded-xl bg-gradient-to-br from-brand/25 via-sky-300/30 to-fuchsia-300/30 dark:from-brand/40"></div>
-          <p class="mt-3 text-center text-xs text-slate-500 dark:text-slate-400">Key art/kapak görseli için yer tutucu</p>
+        <div class="rounded-2xl border border-purple-900/40 p-4 shadow-sm">
+          <div class="aspect-video w-full rounded-xl bg-gradient-to-br from-purple-600/30 via-purple-400/20 to-fuchsia-500/30"></div>
+          <p class="mt-3 text-center text-xs text-slate-400">Key art/kapak görseli için yer tutucu</p>
         </div>
       </div>
     </section>
 
     <!-- GAMES -->
     <section id="games" class="py-12 animate-slideUp">
-      <h2 class="text-2xl font-semibold tracking-tight">Oyunlarımız</h2>
+      <h2 class="text-2xl font-semibold tracking-tight text-purple-300">Oyunlarımız</h2>
       <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="rounded-2xl border border-slate-200 p-4 shadow-sm dark:border-slate-800 hover:shadow-md transition-shadow">
-          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-tr from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-700"></div>
+        <article class="rounded-2xl border border-purple-900/40 p-4 shadow-sm hover:shadow-purple-800/40 transition-shadow">
+          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-tr from-purple-950 to-purple-900"></div>
           <h4 class="mt-3 font-semibold">Astronaut Zero</h4>
-          <p class="text-sm text-slate-600 dark:text-slate-400">2D side‑scroller hayatta kalma. Meteor yağmurundan kaç, global skor tablosunda yüksel.</p>
+          <p class="text-sm text-slate-300">2D side‑scroller hayatta kalma. Meteor yağmurundan kaç, global skor tablosunda yüksel.</p>
         </article>
       </div>
     </section>
 
     <!-- STUDIO -->
     <section id="studio" class="py-12 animate-slideUp">
-      <h2 class="text-2xl font-semibold tracking-tight">Stüdyo</h2>
-      <p class="mt-2 max-w-2xl text-slate-600 dark:text-slate-300">Emelans Games; mobil oyunlar üzerine çalışmalarına başlamış tek kişilik ekip.</p>
+      <h2 class="text-2xl font-semibold tracking-tight text-purple-300">Stüdyo</h2>
+      <p class="mt-2 max-w-2xl text-slate-300">Emelans Games; mobil ve PC için küçük ama iddialı projeler yapan bağımsız bir stüdyo.</p>
     </section>
 
     <!-- CAREERS -->
     <section id="careers" class="py-12 animate-slideUp">
-      <h2 class="text-2xl font-semibold tracking-tight">Kariyer</h2>
-      <p class="mt-2 max-w-2xl text-slate-600 dark:text-slate-300">CV değil, küçük bir oyun/prototip linki istiyoruz. Hibrit/uzaktan çalışma.</p>
+      <h2 class="text-2xl font-semibold tracking-tight text-purple-300">Kariyer</h2>
+      <p class="mt-2 max-w-2xl text-slate-300">CV değil, küçük bir oyun/prototip linki istiyoruz. Hibrit/uzaktan çalışma.</p>
       <div class="mt-6 grid gap-6 md:grid-cols-2">
-        <article class="rounded-2xl border border-slate-200 p-5 shadow-sm dark:border-slate-800 hover:shadow-md transition-shadow">
+        <article class="rounded-2xl border border-purple-900/40 p-5 shadow-sm hover:shadow-purple-800/40 transition-shadow">
           <h3 class="font-semibold">Gameplay Developer (Godot)</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Input, fizik, UI. Profil: temiz kod, hızlı prototip.</p>
+          <p class="mt-2 text-sm text-slate-300">Input, fizik, UI. Profil: temiz kod, hızlı prototip.</p>
         </article>
-        <article class="rounded-2xl border border-slate-200 p-5 shadow-sm dark:border-slate-800 hover:shadow-md transition-shadow">
+        <article class="rounded-2xl border border-purple-900/40 p-5 shadow-sm hover:shadow-purple-800/40 transition-shadow">
           <h3 class="font-semibold">Pixel Artist</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Karakter animasyonu, UI ikonları, çevresel tile set.</p>
+          <p class="mt-2 text-sm text-slate-300">Karakter animasyonu, UI ikonları, çevresel tile set.</p>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 py-8 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400 animate-fadeIn">
+  <footer class="border-t border-purple-900/50 py-8 text-sm text-slate-400 animate-fadeIn">
     <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 md:flex-row">
       <p>© <span id="y"></span> Emelans Games</p>
       <nav class="flex gap-4">
-        <a href="#" class="hover:opacity-80" id="discord">Discord</a>
-        <a href="#" class="hover:opacity-80">X/Twitter</a>
-        <a href="#" class="hover:opacity-80">YouTube</a>
-        <a href="#" class="hover:opacity-80">İletişim</a>
+        <a href="https://discord.gg/" target="_blank" rel="noopener" class="hover:opacity-80" id="discord">Discord</a>
+        <a href="https://x.com/" target="_blank" rel="noopener" class="hover:opacity-80">X/Twitter</a>
+        <a href="https://youtube.com/" target="_blank" rel="noopener" class="hover:opacity-80">YouTube</a>
+        <a href="mailto:hello@emelans.games" class="hover:opacity-80">İletişim</a>
       </nav>
     </div>
   </footer>
