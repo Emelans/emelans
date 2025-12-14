@@ -1,0 +1,443 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+/* Variables */
+:root {
+    --bg-color: #050505;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --accent-purple: #8b5cf6;
+    --accent-blue: #3b82f6;
+    --accent-glow: rgba(139, 92, 246, 0.5);
+    --font-main: 'Outfit', sans-serif;
+    --transition: all 0.3s ease;
+}
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none; /* Custom cursor */
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+ul {
+    list-style: none;
+}
+/* Custom Cursor */
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-purple);
+}
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--accent-purple);
+    transition: width 0.2s, height 0.2s;
+}
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, var(--text-primary), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    position: relative;
+}
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-purple);
+    transition: width 0.3s;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+.github-btn {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+.github-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-primary);
+}
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+/* Dynamic background gradient */
+.hero-bg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+    animation: rotateBg 20s linear infinite;
+    z-index: -1;
+}
+@keyframes rotateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.hero-content {
+    text-align: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+/* Glitch Effect Typography */
+.glitch-text {
+    font-size: 5rem;
+    font-weight: 700;
+    position: relative;
+    color: var(--text-primary);
+}
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.glitch-text::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+    0% { clip: rect(30px, 9999px, 10px, 0); }
+    5% { clip: rect(80px, 9999px, 90px, 0); }
+    10% { clip: rect(60px, 9999px, 20px, 0); }
+    100% { clip: rect(10px, 9999px, 80px, 0); }
+}
+@keyframes glitch-anim2 {
+    0% { clip: rect(10px, 9999px, 90px, 0); }
+    5% { clip: rect(50px, 9999px, 30px, 0); }
+    10% { clip: rect(20px, 9999px, 60px, 0); }
+    100% { clip: rect(70px, 9999px, 40px, 0); }
+}
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: none; /* Let custom cursor handle hovering */
+}
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+    border: none;
+}
+.btn-primary:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+    transform: translateY(-2px);
+}
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.scroll-down span {
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--text-secondary);
+    border-right: 2px solid var(--text-secondary);
+    transform: rotate(45deg);
+    animation: scroll 2s infinite;
+}
+.scroll-down span:nth-child(2) { animation-delay: 0.2s; }
+.scroll-down span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes scroll {
+    0% { opacity: 0; transform: rotate(45deg) translate(-10px, -10px); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: rotate(45deg) translate(10px, 10px); }
+}
+/* Sections */
+.section {
+    padding: 6rem 0;
+}
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.highlight {
+    color: var(--accent-purple);
+}
+/* Games Grid */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.game-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.game-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-purple);
+    box-shadow: 0 10px 40px -10px rgba(139, 92, 246, 0.3);
+}
+.card-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.game-card:hover .card-image img {
+    transform: scale(1.1);
+}
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+.game-card:hover .card-overlay {
+    opacity: 1;
+}
+.card-overlay i {
+    font-size: 2rem;
+    color: var(--accent-purple);
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.game-card:hover .card-overlay i {
+    transform: scale(1);
+}
+.card-content {
+    padding: 1.5rem;
+}
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.genre {
+    color: var(--accent-blue);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    display: block;
+}
+.description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+.btn-sm {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--text-secondary);
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+.btn-sm:hover {
+    border-color: var(--accent-purple);
+    background: var(--accent-purple);
+    color: #fff;
+}
+/* About Section */
+.about-section {
+    background: linear-gradient(to top, #000, rgba(20, 20, 20, 0.5));
+}
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    text-align: center;
+}
+.about-text {
+    max-width: 800px;
+}
+.about-text p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+}
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+/* Footer */
+.footer {
+    background: black;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+.social-icon:hover {
+    background: var(--accent-purple);
+    transform: translateY(-3px);
+}
+.footer-bottom {
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+}
+/* Scroll Animation Utilities */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .glitch-text { font-size: 3rem; }
+    .nav-links { display: none; } /* Add hamburger menu JS later if needed */
+    .hero-content { padding: 0 1rem; }
+    .hero-subtitle { font-size: 1.2rem; }
+    .cursor-dot, .cursor-outline { display: none; } /* Default cursor on touch */
+    body { cursor: auto; }
+}
