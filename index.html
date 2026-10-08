@@ -1,139 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emelans | Mobile Game Studio</title>
-    <meta name="description" content="Emelans - Creating immersive and fun mobile gaming experiences. Check out our latest titles.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5f0">
+  <meta name="description" content="Emelans is an indie mobile game studio building games around meaningful choices. Explore our restaurant-management game in development.">
+  <meta property="og:title" content="Emelans — Indie mobile games">
+  <meta property="og:description" content="Indie mobile games. Designed with intent.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://emelans.com/">
+  <meta property="og:image" content="https://emelans.com/assets/images/restaurant-world.png">
+  <title>Emelans — Indie Mobile Game Studio</title>
+  <link rel="icon" href="assets/brand/mok/mok-icon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/brand/mok/mok-icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/brand/mok/mok-icon-180.png">
+  <link rel="preload" href="assets/fonts/outfit-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">EMELANS</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#home" aria-label="Emelans home"><span class="brand-frame brand-wave" aria-hidden="true"><img src="assets/brand/mok/emelans-mok-wave-v1.png" alt="" width="1774" height="887"></span><span class="sr-only">Emelans</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" data-i18n-aria="menuLabel" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="navigation" id="navigation" aria-label="Main navigation" data-i18n-aria="navLabel">
+        <a href="#games" data-i18n="navGames">Our work</a><a href="#studio" data-i18n="navStudio">The studio</a>
+        <a href="#contact" class="nav-contact"><span data-i18n="navContact">Say hello</span><span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="language-button" id="language-toggle" aria-label="Türkçeye geç" title="Türkçeye geç"><span id="language-label">TR</span></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero shell" id="home" aria-labelledby="hero-title">
+      <div class="hero-topline"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="eyebrow">INDIE MOBILE GAME STUDIO</span></p><span class="edition" data-i18n="heroNote">Small team. Clear vision.</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title"><span data-i18n="heroLine1">Made for</span><br><span data-i18n="heroLine2">your kind</span><br><span class="worlds" data-i18n="heroLine3">of play.</span></h1>
+          <p class="hero-description" data-i18n="heroDescription">Indie mobile games, built around meaningful choices and worlds you can shape.</p>
+          <a class="button button-dark" href="#games"><span data-i18n="heroCta">Explore our games</span><span class="button-arrow" aria-hidden="true">↗</span></a>
         </div>
-    </nav>
-    <header id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <h1 class="glitch-text" data-text="EMELANS">EMELANS</h1>
-            <p class="hero-subtitle">Crafting Real Mobile Games</p>
-            <a href="#games" class="btn btn-primary">Our Games <i class="fas fa-gamepad"></i></a>
+        <div class="game-preview reveal" aria-label="A small preview of our restaurant world" data-i18n-aria="playgroundLabel">
+          <div class="mini-world">
+            <div class="world-toolbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="worldToolbar">Emelans / Dineit</span><span aria-hidden="true">↗</span></div>
+            <img src="assets/images/restaurant-world.png" alt="Our restaurant game, with tiny customers, neighbourhood buildings and a shop to make your own" data-i18n-alt="worldAlt" width="1600" height="1100" fetchpriority="high">
+            <div class="world-caption"><span class="caption-number">01</span><span data-i18n="worldCaption">A world you can shape.</span><span class="preview-index" aria-hidden="true">Dineit</span></div>
+          </div>
         </div>
-        <div class="scroll-down">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-    <section id="games" class="section games-section">
-        <div class="container">
-            <h2 class="section-title">Latest <span class="highlight">Releases</span></h2>
-            <div class="games-grid">
-                <!-- Game Card 1 -->
-                <article class="game-card fade-in">
-                    <div class="card-image">
-                        <img src="https://placehold.co/600x400/1a1a1a/8b5cf6?text=Coming+Soon" alt="Game 1">
-                        <div class="card-overlay">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Astronaut Zero</h3>
-                        <p class="genre">Sci-Fi Arcade</p>
-                        <p class="description">Explore the depths of space in this fast-paced arcade shooter. Dodge asteroids and battle epic bosses.</p>
-                        <a href="#" class="btn btn-sm">Learn More</a>
-                    </div>
-                </article>
-                <!-- Game Card 2 -->
-                <article class="game-card fade-in" style="transition-delay: 100ms;">
-                    <div class="card-image">
-                        <img src="https://placehold.co/600x400/1a1a1a/3b82f6?text=In+Development" alt="Game 2">
-                        <div class="card-overlay">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Project I</h3>
-                        <p class="genre">Idle</p>
-                        <p class="description">Earn money by running your own restaurant, grow your business, and build the country's largest restaurant chain.</p>
-                        <a href="#" class="btn btn-sm">Learn More</a>
-                    </div>
-                </article>
-                <!-- Game Card 3 -->
-                <article class="game-card fade-in" style="transition-delay: 200ms;">
-                    <div class="card-image">
-                        <img src="https://placehold.co/600x400/1a1a1a/ec4899?text=Prototype" alt="Game 3">
-                        <div class="card-overlay">
-                            <i class="fas fa-ghost"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Project A</h3>
-                        <p class="genre">Secret</p>
-                        <p class="description">Just wait for information.</p>
-                        <a href="#" class="btn btn-sm">Learn More</a>
-                    </div>
-                </article>
-            </div>
-        </div>
+      </div>
+      <div class="hero-bottom"><span data-i18n="heroBottom">Built for mobile. Designed with intent.</span><a href="#games" class="scroll-link"><span data-i18n="scroll">KEEP EXPLORING</span><span aria-hidden="true">↓</span></a></div>
     </section>
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text fade-in-left">
-                    <h2 class="section-title">Who We <span class="highlight">Are</span></h2>
-                    <p>Emelans is a passionate indie game development studio dedicated to creating mobile gaming experiences.</p>
-                    <p>Born from the frustration of downloading yet another repetitive, ad-riddled mobile game. We are here to prove that mobile gaming can still be unique, respectful, and genuinely fun.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-number">2</span>
-                            <span class="stat-label">Games</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">10k+</span>
-                            <span class="stat-label">Downloads</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Optional: Add an image or illustration here -->
-            </div>
+    <section id="games" class="work-section" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-heading reveal"><p class="eyebrow"><span class="section-index">01 /</span><span data-i18n="workEyebrow">ON OUR WORKBENCH</span></p><h2 id="work-title" data-i18n="workTitle">One world. So many possibilities.</h2></div>
+        <article class="featured-project reveal">
+          <div class="project-copy">
+            <p class="project-state"><span class="status-dot" aria-hidden="true"></span><span data-i18n="development">IN DEVELOPMENT</span></p>
+            <p class="project-name">Dineit</p>
+            <h3><span data-i18n="projectLine1">Your corner.</span><br><span data-i18n="projectLine2">Your rules.</span></h3>
+            <p class="project-description" data-i18n="projectDescription">A restaurant is more than a menu. Create a space that's yours, bring your team together, and turn one little shop into a story of your own.</p>
+            <div class="project-tags"><span data-i18n="tagManagement">Restaurant management</span><span data-i18n="tagMobile">Made for mobile</span></div>
+            <button class="button button-dark" type="button" id="project-open" aria-haspopup="dialog" aria-controls="project-dialog"><span data-i18n="projectCta">A closer look</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            <p class="project-footnote" data-i18n="projectFootnote">A work in progress. Screenshots are from the game.</p>
+          </div>
+          <div class="project-stage">
+            <span class="stage-top" data-i18n="stageTop">SMALL SPACE. BIG PLANS.</span><div class="stage-grid" aria-hidden="true"></div>
+            <div class="phone"><div class="phone-island" aria-hidden="true"></div><img src="assets/images/restaurant-phone-en.png" data-image-en="assets/images/restaurant-phone-en.png" data-image-tr="assets/images/restaurant-phone.png" alt="An actual mobile screenshot of the restaurant, showing furnishing, menus and staff controls" data-i18n-alt="phoneAlt" width="1170" height="2532" loading="lazy"></div>
+            <span class="stage-bottom" data-i18n="stageBottom">REAL GAME SCREENSHOT / DEVELOPMENT BUILD</span>
+          </div>
+        </article>
+        <div class="notebook reveal">
+          <div><p class="eyebrow" data-i18n="notebookEyebrow">WHAT COMES NEXT</p><p data-i18n="notebookDescription">New concepts, carefully developed.</p></div>
+          <div class="notebook-project"><span class="notebook-symbol" aria-hidden="true">02</span><div><h3>Project A</h3><p data-i18n="projectA">An idea we're keeping under wraps</p></div><span class="notebook-status" data-i18n="earlyConcept">Early concept</span></div>
         </div>
+      </div>
     </section>
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">EMELANS</div>
-                <p>Connect with us on social media.</p>
-                <div class="social-links">
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Emelans. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+    <section class="studio-section shell" id="studio" aria-labelledby="studio-title">
+      <div class="studio-intro reveal"><p class="eyebrow"><span class="section-index">02 /</span><span data-i18n="studioEyebrow">THE PEOPLE BEHIND THE PIXELS</span></p><h2 id="studio-title"><span data-i18n="studioLine1">A small studio.</span><br><span class="muted-heading" data-i18n="studioLine2">An indie point of view.</span></h2></div>
+      <div class="studio-grid">
+        <div class="studio-copy reveal"><p data-i18n="studioDescription">We're Emelans, an indie mobile game studio. We love the little decisions that make a game feel like your own: a space you build, a world you explore, a plan that finally comes together.</p><p data-i18n="studioDescription2">We're building thoughtfully, one detail at a time. There's plenty still to discover.</p><div class="studio-signature" aria-hidden="true"><span class="brand-frame brand-peek"><img src="assets/brand/mok/emelans-mok-peek-v1.png" alt="" width="1774" height="887" loading="lazy"></span></div></div>
+        <aside class="studio-focus reveal" aria-label="Current project" data-i18n-aria="currentProjectLabel"><p class="eyebrow" data-i18n="currentProject">OUR CURRENT PROJECT</p><h3>Dineit</h3><p data-i18n="currentProjectDescription">A mobile restaurant-management game. Design your space, build your menu, and hire your team.</p><div class="focus-details"><span data-i18n="focusPlatforms">Phones & tablets</span><span data-i18n="development">IN DEVELOPMENT</span></div></aside>
+      </div>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner reveal"><div><p class="eyebrow"><span class="section-index">03 /</span><span data-i18n="contactEyebrow">GOOD THINGS START WITH A HELLO</span></p><h2 id="contact-title"><span data-i18n="contactLine1">Something on</span><br><span data-i18n="contactLine2">your mind?</span></h2><p data-i18n="contactDescription">An idea, a question, or a little feedback. We'd love to hear it.</p></div><div class="contact-actions"><a class="contact-orbit" href="mailto:emiryucelyucel27@hotmail.com"><span data-i18n="contactCta">Let's talk</span><span aria-hidden="true">↗</span></a><div class="contact-social"><p class="social-caption" data-i18n="socialHeading">Follow Emelans</p><div class="social-links" aria-label="Social channels" data-i18n-aria="socialLabel">
+          <button type="button" disabled class="social-button" aria-label="Instagram" data-i18n-aria="instagramLabel"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Instagram</span></button>
+          <button type="button" disabled class="social-button" aria-label="YouTube" data-i18n-aria="youtubeLabel"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor" stroke="none"/></svg><span>YouTube</span></button>
+          <button type="button" disabled class="social-button" aria-label="X" data-i18n-aria="xLabel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 12 18h4L8 3zM20 3 4 21"/></svg><span>X</span></button>
+        </div></div></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell"><div class="footer-top"><a class="wordmark footer-brand" href="#home"><span class="brand-frame brand-jump" aria-hidden="true"><img src="assets/brand/mok/emelans-mok-jump-v1.png" alt="" width="1774" height="887" loading="lazy"></span><span class="sr-only">Emelans</span></a><p data-i18n="footerTagline">Indie games. Made with intent.</p></div><div class="footer-bottom"><p>© <span id="copyright-year">2026</span> Emelans. <span data-i18n="copyright">Made with care.</span></p><a href="#home" data-i18n="backTop">Back to top ↑</a></div></div></footer>
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header"><p class="eyebrow" data-i18n="development">IN DEVELOPMENT</p><button class="dialog-close" type="button" id="project-close" aria-label="Close project preview" data-i18n-aria="dialogClose">×</button></div>
+    <h2 id="dialog-title">Dineit</h2><p class="dialog-description" data-i18n="dialogDescription">Build a restaurant your way. Choose its furniture, create a menu, recruit your team, and keep a living little business running.</p>
+    <img src="assets/images/restaurant-world.png" alt="The restaurant game world, shown at its natural overview scale" data-i18n-alt="dialogAlt" width="1600" height="1100" loading="lazy">
+    <div class="dialog-features"><div><span>01</span><h3 data-i18n="feature1">Make your space</h3><p data-i18n="feature1Description">Choose and place furniture. Give each restaurant its own character.</p></div><div><span>02</span><h3 data-i18n="feature2">Bring it to life</h3><p data-i18n="feature2Description">Build a team, plan your menu, and serve customers together.</p></div><div><span>03</span><h3 data-i18n="feature3">Grow your story</h3><p data-i18n="feature3Description">Balance supplies and spending as you expand into new locations.</p></div></div>
+    <p class="dialog-note" data-i18n="dialogNote">Dineit is in development. A public download link is not available here yet.</p><a class="text-link" href="mailto:emiryucelyucel27@hotmail.com"><span data-i18n="dialogContact">Ask us about the project</span><span aria-hidden="true">↗</span></a>
+  </dialog>
+  <noscript><p class="noscript-note">For project details, <a href="mailto:emiryucelyucel27@hotmail.com">get in touch</a>.</p></noscript>
 </body>
 </html>
