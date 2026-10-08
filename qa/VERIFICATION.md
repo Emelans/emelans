@@ -22,3 +22,5 @@ The simulated DOM checks do not validate CSS layout or native browser behaviour.
 ## Delivery scope
 
 Website publication to the existing GitHub Pages main branch is explicitly authorized by the owner. CNAME is unchanged. Internal research, generation prompts, rejected logos and QA screenshots are excluded from the commit. No Unity source change, TestFlight upload, account security change or DNS change.
+
+Initial redesign commit 9eede43 was pushed successfully; GitHub Pages deployment run 37844076111 completed successfully. A live-browser check then caught stale CSS and JavaScript from the previous site: the new HTML was served with the old layout and a non-working language toggle. CSS and script URLs now carry a release version to invalidate those cached files. Live verification must use those versioned assets, not just a successful Pages build.

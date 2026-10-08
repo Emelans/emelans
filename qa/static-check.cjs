@@ -10,7 +10,7 @@ function check(name, run) { run(); checks.push(name); }
 check('Local assets exist', () => {
   for (const match of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     const file=match[1];
-    if (!/^(?:https?:|mailto:|#)/.test(file)) assert.ok(fs.existsSync(path.join(root,file)),file);
+    if (!/^(?:https?:|mailto:|#)/.test(file)) assert.ok(fs.existsSync(path.join(root,file.split('?')[0])),file);
   }
 });
 check('Anchor destinations and unique IDs', () => {
