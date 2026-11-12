@@ -21,14 +21,15 @@ Publishing target: the existing `main` branch of Emelans/emelans and its GitHub 
 - System reduced-motion support remains automatic.
 - Instagram, YouTube and X buttons in the contact section. No coming-soon captions or fake account links; disabled until real account URLs are provided.
 - Direct email contact: emiryucelyucel27@hotmail.com.
+- privacy.html and support.html: bilingual Bistroodle privacy policy and support pages (App Store privacy and support URLs), switched by page.js.
 
-Dineit is the user-confirmed game name. No public download or store launch is claimed. The cancelled project was removed. Project A is shown only as an early concept, not an announced or released game.
+Bistroodle is the game name (formerly Dineit). No public download or store launch is claimed. The cancelled project was removed. Project A is shown only as an early concept, not an announced or released game.
 
 ## Assets
 
-- assets/images/restaurant-world.png: own-game capture from Reports/2026-10-08-sky-city/tablet-0-istanbul.png.
-- assets/images/restaurant-phone.png: own-game capture from Reports/2026-10-08-sky-city/live-hud-istanbul.png.
-- assets/images/restaurant-phone-en.png: unmodified English-mode own-game capture from Reports/2026-10-07-test-feedback/Phone/salon-en.png. This is older than the sky-city capture and should eventually be replaced with a current English capture. The Turkish restaurant name in this image is a player/shop proper name, not a tutorial label. Switching site language selects the corresponding screenshot without distorting its aspect ratio.
+- assets/images/bistroodle-evening.jpg: own-game capture from Reports/2026-11-05-kalabalik/vitrin-00-genel.png (hero).
+- assets/images/bistroodle-restaurant.jpg: own-game capture from Reports/2026-11-05-ic-mekan/01-salon-genel.png (project dialog).
+- assets/images/bistroodle-phone-tr.jpg / bistroodle-phone-en.jpg: landscape phone captures from Reports/2026-11-06-ceo/store/raw/01-servis.png and store/raw-en/01-servis.png, resized to 1600 × 739. The site language picks the matching one.
 - assets/fonts/outfit-variable.ttf: Outfit, official Google Fonts repository (google/fonts, ofl/outfit). SIL Open Font License 1.1 is included as assets/fonts/OFL.txt.
 - assets/brand/mok/: owner-approved transparent MOK mascot lockups in three empty-handed poses. Wave appears in the header, peek in the studio section, jump in the footer on a light plaque for contrast. PNG artwork is unchanged; CSS frames remove empty canvas margins. Decorative images have empty alt text; home links retain accessible Emelans labels.
 - MOK face icons at 32, 180 and 192 pixels replace the old geometric favicon. The face was derived from the approved mascot with the built-in image tool, then downsampled for the browser and Apple touch icon.
@@ -57,5 +58,5 @@ Publish website files and used assets to the existing GitHub Pages branch after 
 
 - English studio descriptions use indie consistently.
 - GitHub links, exposed email address, no-forms copy and decorative language icon removed.
-- Generic principles replaced with a concrete Dineit development card.
+- Generic principles replaced with a concrete game development card.
 - Brand references reviewed: https://ustwogames.co.uk/ and https://rawfury.com/. No third-party logo is used or copied.

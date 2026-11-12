@@ -15,8 +15,8 @@
     heroLine1:'Senin', heroLine2:'tarzında', heroLine3:'oyunlar.',
     heroDescription:'Kararlarının fark yarattığı, kendi tarzında şekillendirebildiğin dünyalar. Indie mobil oyunlar geliştiriyoruz.',
     heroCta:'Oyunlarımızı keşfet', playgroundLabel:'Restoran dünyamızdan küçük bir önizleme',
-    worldToolbar:'Emelans / Dineit',
-    worldAlt:'Minik müşteriler, mahalle binaları ve sana ait bir dükkânla restoran oyunumuz',
+    worldToolbar:'Emelans / Bistroodle',
+    worldAlt:'Bistroodle’da bir akşam: kırmızı halıda sıra bekleyen misafirler, masalarda kahve siparişleri ve terasta bir bilardo masası',
     worldCaption:'Senin şekillendirdiğin bir dünya.',
     heroBottom:'Mobil için. Her ayrıntısı düşünülerek.', scroll:'KEŞFETMEYE DEVAM',
     workEyebrow:'ÜZERİNDE ÇALIŞTIKLARIMIZ', workTitle:'Bir dünya. Bir sürü olasılık.',
@@ -25,7 +25,7 @@
     projectDescription:'Bir restoran, menüden fazlasıdır. Sana ait bir mekân yarat, ekibini bir araya getir ve küçük bir dükkânı kendi hikâyene dönüştür.',
     tagManagement:'Restoran yönetimi', tagMobile:'Mobil için tasarlandı', projectCta:'Biraz daha yakından',
     projectFootnote:'Geliştirme sürüyor. Görüntüler oyunun içinden.', stageTop:'KÜÇÜK BİR MEKÂN. BÜYÜK PLANLAR.',
-    phoneAlt:'Döşeme, menü ve personel kontrollerini gösteren gerçek mobil oyun görüntüsü',
+    phoneAlt:'Telefonda Bistroodle: kahve ve sandviç isteyen misafirler, personel, tarif ve tedarik düğmeleri',
     stageBottom:'GERÇEK OYUN GÖRÜNTÜSÜ / GELİŞTİRME SÜRÜMÜ',
     notebookEyebrow:'SIRADA NE VAR?', notebookDescription:'Özenle geliştirilen yeni fikirler.',
     projectA:'Şimdilik biraz gizli tuttuğumuz bir fikir', earlyConcept:'İlk fikirler',
@@ -39,15 +39,16 @@
     footerTagline:'Indie oyunlar. Özenli tasarım.', copyright:'Özenle hazırlandı.', backTop:'Başa dön ↑',
     dialogClose:'Proje önizlemesini kapat',
     dialogDescription:'Restoranını kendi tarzında kur. Eşyalarını seç, menünü oluştur, ekibini işe al ve yaşayan küçük bir işletmeyi yönet.',
-    dialogAlt:'Restoran oyununun dünyası, doğal genel görünüm ölçeğinde',
+    dialogAlt:'Yukarıdan bir Bistroodle restoranı: yemek masaları, kırmızı localar, açık mutfak ve bilardo köşesi',
     feature1:'Mekânını oluştur', feature1Description:'Eşyalarını seç ve yerleştir. Her restorana kendi karakterini ver.',
     feature2:'Hayat kat', feature2Description:'Ekibini kur, menünü planla ve müşterilerine birlikte hizmet ver.',
     feature3:'Hikâyeni büyüt', feature3Description:'Yeni dükkânlara açılırken stoklarını ve harcamalarını dengele.',
-    dialogNote:'Dineit geliştirme aşamasında. Burada henüz herkese açık bir indirme bağlantısı bulunmuyor.',
+    dialogNote:'Bistroodle kapalı test aşamasında. Henüz uygulama mağazalarında yok.',
     dialogContact:'Proje hakkında bize yaz',
     socialHeading:'Emelans’ı takip et', socialLabel:'Sosyal medya hesapları', instagramLabel:'Instagram', youtubeLabel:'YouTube', xLabel:'X',
+    footerNavLabel:'Yasal bilgiler ve yardım', privacyLink:'Gizlilik', supportLink:'Destek',
     title:'Emelans — Indie Mobil Oyun Stüdyosu',
-    description:'Emelans, kararlarının fark yarattığı dünyalar geliştiren indie bir mobil oyun stüdyosu. Restoran yönetimi oyunumuza göz at.'
+    description:'Emelans, kararlarının fark yarattığı dünyalar geliştiren indie bir mobil oyun stüdyosu. Telefon ve tablet için restoran kurma oyunumuz Bistroodle’a göz at.'
   };
   const readSetting = key => { try { return localStorage.getItem(key); } catch { return null; } };
   const saveSetting = (key, value) => { try { localStorage.setItem(key, value); } catch { /* Preferences are optional. */ } };
@@ -76,8 +77,6 @@
     document.querySelectorAll('[data-i18n-alt]').forEach(el => { el.alt = text(el.dataset.i18nAlt); });
     document.querySelectorAll('[data-image-en]').forEach(el => {
       el.src = language === 'en' ? el.dataset.imageEn : el.dataset.imageTr;
-      el.width = language === 'en' ? 1170 : 960;
-      el.height = language === 'en' ? 2532 : 1800;
     });
     document.title = text('title');
     document.querySelector('meta[name="description"]').content = text('description');

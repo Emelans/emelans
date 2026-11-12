@@ -22,8 +22,8 @@ const { chromium } = require('playwright');
       for (const language of ['en','tr']) {
         if (language === 'tr') await page.locator('#language-toggle').click();
         assert.equal(await page.locator('html').getAttribute('lang'), language);
-        assert.equal(await page.locator('.phone img').getAttribute('src'),language==='en'?'assets/images/restaurant-phone-en.png':'assets/images/restaurant-phone.png');
-        assert.equal(await page.locator('.project-name').innerText(),'Dineit');
+        assert.equal(await page.locator('.phone img').getAttribute('src'),language==='en'?'assets/images/bistroodle-phone-en.jpg':'assets/images/bistroodle-phone-tr.jpg');
+        assert.equal(await page.locator('.project-name').innerText(),'Bistroodle');
         assert.equal(await page.locator('a[href*="github.com"]').count(),0);
         const dimensions = await page.evaluate(() => ({width:innerWidth,scroll:document.documentElement.scrollWidth}));
         assert.ok(dimensions.scroll <= dimensions.width + 1, JSON.stringify({width,language,dimensions}));

@@ -137,15 +137,15 @@ check('Social buttons honest and inactive without accounts',()=>{
   assert.equal(byClass('social-caption').textContent,'Follow Emelans');
   assert.ok(!/coming soon|GitHub|independent|Project I|contact-address|language-globe/i.test(html));
 });
-check('Dineit named consistently and image follows language',()=>{
-  assert.equal(byClass('project-name').textContent,'Dineit');
-  assert.equal(byId('dialog-title').textContent,'Dineit');
+check('Bistroodle named consistently and image follows language',()=>{
+  assert.equal(byClass('project-name').textContent,'Bistroodle');
+  assert.equal(byId('dialog-title').textContent,'Bistroodle');
   const shot=doc.querySelectorAll('[data-image-en]')[0];
-  assert.equal(shot.src,'assets/images/restaurant-phone-en.png');
+  assert.equal(shot.src,'assets/images/bistroodle-phone-en.jpg');
   byId('language-toggle').click();
-  assert.equal(shot.src,'assets/images/restaurant-phone.png');
+  assert.equal(shot.src,'assets/images/bistroodle-phone-tr.jpg');
   byId('language-toggle').click();
-  assert.equal(shot.src,'assets/images/restaurant-phone-en.png');
+  assert.equal(shot.src,'assets/images/bistroodle-phone-en.jpg');
 });
 check('Blocked storage does not break interactions',()=>{
   throwStorage=true;byId('language-toggle').click();throwStorage=false;
