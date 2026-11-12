@@ -27,8 +27,8 @@ Bistroodle is the game name (formerly Dineit). No public download or store launc
 
 ## Assets
 
-- assets/images/bistroodle-evening.jpg: own-game capture from Reports/2026-11-05-kalabalik/vitrin-00-genel.png (hero).
-- assets/images/bistroodle-restaurant.jpg: own-game capture from Reports/2026-11-05-ic-mekan/01-salon-genel.png (project dialog).
+- assets/images/bistroodle-day.jpg: own-game capture without interface, cropped from Reports/2026-11-06-ceo/store/raw-en-world/01-servis.png (hero).
+- assets/images/bistroodle-service.jpg: own-game capture without interface from Reports/2026-11-06-ceo/store/raw-en-world/02-yakin.png (project dialog).
 - assets/images/bistroodle-phone-tr.jpg / bistroodle-phone-en.jpg: landscape phone captures from Reports/2026-11-06-ceo/store/raw/01-servis.png and store/raw-en/01-servis.png, resized to 1600 × 739. The site language picks the matching one.
 - assets/fonts/outfit-variable.ttf: Outfit, official Google Fonts repository (google/fonts, ofl/outfit). SIL Open Font License 1.1 is included as assets/fonts/OFL.txt.
 - assets/brand/mok/: owner-approved transparent MOK mascot lockups in three empty-handed poses. Wave appears in the header, peek in the studio section, jump in the footer on a light plaque for contrast. PNG artwork is unchanged; CSS frames remove empty canvas margins. Decorative images have empty alt text; home links retain accessible Emelans labels.
