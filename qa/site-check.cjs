@@ -22,7 +22,7 @@ const { chromium } = require('playwright');
       for (const language of ['en','tr']) {
         if (language === 'tr') await page.locator('#language-toggle').click();
         assert.equal(await page.locator('html').getAttribute('lang'), language);
-        assert.equal(await page.locator('.phone img').getAttribute('src'),language==='en'?'assets/images/bistroodle-phone-en.jpg':'assets/images/bistroodle-phone-tr.jpg');
+        assert.equal(await page.locator('.phone img').getAttribute('src'),language==='en'?'assets/images/bistroodle-phone-en.jpg?v=20261113':'assets/images/bistroodle-phone-tr.jpg');
         assert.equal(await page.locator('.project-name').innerText(),'Bistroodle');
         assert.equal(await page.locator('a[href*="github.com"]').count(),0);
         const dimensions = await page.evaluate(() => ({width:innerWidth,scroll:document.documentElement.scrollWidth}));

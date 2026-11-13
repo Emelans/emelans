@@ -141,11 +141,11 @@ check('Bistroodle named consistently and image follows language',()=>{
   assert.equal(byClass('project-name').textContent,'Bistroodle');
   assert.equal(byId('dialog-title').textContent,'Bistroodle');
   const shot=doc.querySelectorAll('[data-image-en]')[0];
-  assert.equal(shot.src,'assets/images/bistroodle-phone-en.jpg');
+  assert.equal(shot.src,'assets/images/bistroodle-phone-en.jpg?v=20261113');
   byId('language-toggle').click();
   assert.equal(shot.src,'assets/images/bistroodle-phone-tr.jpg');
   byId('language-toggle').click();
-  assert.equal(shot.src,'assets/images/bistroodle-phone-en.jpg');
+  assert.equal(shot.src,'assets/images/bistroodle-phone-en.jpg?v=20261113');
 });
 check('Blocked storage does not break interactions',()=>{
   throwStorage=true;byId('language-toggle').click();throwStorage=false;
