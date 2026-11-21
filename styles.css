@@ -160,7 +160,8 @@ html[lang="en"] [data-lang-block="en"],html[lang="tr"] [data-lang-block="tr"],ht
 .legal-languages button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .legal-languages button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 html:not(.js-ready) .legal-languages { display: none; }
-html[lang="ko"] .legal { word-break: keep-all; } /* Korean breaks between words, not inside them. */
+html[lang="ko"] .legal { word-break: keep-all; }
+html:not([lang="tr"]) [data-only-lang="tr"] { display: none; } /* The KVKK notice is for players in Türkiye. */ /* Korean breaks between words, not inside them. */
 html:not(.js-ready) [data-lang-block="en"] { display: block; }
 .legal h3 { font-size: 16px; font-weight: 500; margin: 22px 0 8px; }
 .legal strong { color: var(--ink); font-weight: 500; }
