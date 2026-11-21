@@ -46,7 +46,8 @@
     dialogNote:'Bistroodle kapalı test aşamasında. Henüz uygulama mağazalarında yok.',
     dialogContact:'Proje hakkında bize yaz',
     socialHeading:'Emelans’ı takip et', socialLabel:'Sosyal medya hesapları', instagramLabel:'Instagram', youtubeLabel:'YouTube', xLabel:'X',
-    footerNavLabel:'Yasal bilgiler ve yardım', privacyLink:'Gizlilik', supportLink:'Destek',
+    footerNavLabel:'Yasal bilgiler ve yardım', privacyLink:'Gizlilik', termsLink:'Koşullar', kvkkLink:'KVKK', supportLink:'Destek',
+    docsLabel:'Bistroodle belgeleri', docsTitle:'Belgeler', docPrivacy:'Gizlilik Politikası', docTerms:'Kullanım Koşulları', docKvkk:'KVKK Aydınlatma Metni', docSupport:'Destek',
     title:'Emelans — Indie Mobil Oyun Stüdyosu',
     description:'Emelans, kararlarının fark yarattığı dünyalar geliştiren indie bir mobil oyun stüdyosu. Telefon ve tablet için restoran kurma oyunumuz Bistroodle’a göz at.'
   };
