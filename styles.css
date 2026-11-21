@@ -153,6 +153,14 @@ h1 { font-size: clamp(64px,7.6vw,108px); font-weight: 500; line-height: 1.03; le
 .legal .button { margin-top: 18px; }
 [data-lang-block] { display: none; }
 html[lang="en"] [data-lang-block="en"],html[lang="tr"] [data-lang-block="tr"] { display: block; }
+.legal h3 { font-size: 16px; font-weight: 500; margin: 22px 0 8px; }
+.legal strong { color: var(--ink); font-weight: 500; }
+.legal code { font-family: inherit; color: var(--ink); }
+.legal-table { overflow-x: auto; margin: 12px 0 4px; }
+.legal table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.6; }
+.legal th,.legal td { text-align: left; vertical-align: top; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+.legal th { color: var(--ink); font-weight: 500; }
+.legal td:first-child { color: var(--ink); min-width: 140px; }
 .contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 30px; flex: 0 1 350px; min-width: 260px; }
 .contact-social { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .contact-social .social-caption { margin: 0!important; font-size: 12px!important; }
