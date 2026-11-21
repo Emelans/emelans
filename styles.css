@@ -152,7 +152,16 @@ h1 { font-size: clamp(64px,7.6vw,108px); font-weight: 500; line-height: 1.03; le
 .legal a:not(.button) { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .legal .button { margin-top: 18px; }
 [data-lang-block] { display: none; }
-html[lang="en"] [data-lang-block="en"],html[lang="tr"] [data-lang-block="tr"] { display: block; }
+html[lang="en"] [data-lang-block="en"],html[lang="tr"] [data-lang-block="tr"],html[lang="zh"] [data-lang-block="zh"],html[lang="ko"] [data-lang-block="ko"],html[lang="ja"] [data-lang-block="ja"],html[lang="es"] [data-lang-block="es"],html[lang="fr"] [data-lang-block="fr"],html[lang="de"] [data-lang-block="de"],html[lang="it"] [data-lang-block="it"] { display: block; }
+/* The nine game languages above Bistroodle's privacy policy and terms. */
+.legal-languages { display: flex; flex-wrap: wrap; gap: 6px; max-width: 720px; margin-bottom: 28px; }
+.legal-languages button { min-height: 34px; padding: 6px 13px; border: 1px solid #cbd3ca; border-radius: 999px; background: transparent; font-size: 12px; font-weight: 500; color: var(--muted); transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease); }
+.legal-languages button:hover { border-color: var(--ink); color: var(--ink); }
+.legal-languages button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.legal-languages button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+html:not(.js-ready) .legal-languages { display: none; }
+html[lang="ko"] .legal { word-break: keep-all; } /* Korean breaks between words, not inside them. */
+html:not(.js-ready) [data-lang-block="en"] { display: block; }
 .legal h3 { font-size: 16px; font-weight: 500; margin: 22px 0 8px; }
 .legal strong { color: var(--ink); font-weight: 500; }
 .legal code { font-family: inherit; color: var(--ink); }
